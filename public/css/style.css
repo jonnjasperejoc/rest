@@ -1,0 +1,18 @@
+body {color: #000;}
+a, a:hover {color: #000;}
+a.thread,h5 {border-bottom: solid 1px #02B875;}
+h5 {padding-bottom: 20px;}
+#qa {margin: 0 auto;}
+#content h3 {text-align: center;}
+.qa-head {margin-top: 30px;}
+.top-questions {margin-top: 20px;padding: 0 15px;}
+.top-questions ul li {display: inline;}
+.top-questions a, .top-questions a:hover{width: 100%;text-decoration: none;}
+.row {margin-right: 0;margin-left: 0;}
+.block {width: 100%;padding: 15px 0;}
+.block.row {border-bottom: solid 1px #02B875;}
+.q {padding: 0px 30px;}
+.date {width: 100%;text-align: right;font-size: 13px;}
+.arrow {height: 30px;position: relative;right: 13px;}
+.answer-block .form-group, .answer-block .form-group textarea {width: 100%;}
+.hidden {display: none;}

@@ -1,0 +1,32 @@
+include incs/header.pug    
+#content.row
+	.col-md-3
+	.col-md-6
+		.row.qa-head.text-center
+			img#qa.img-center(src=''+root+'img/Coding-Html-icon.png')
+		.row.top-questions
+			.block
+				h5 #{question.text}
+			each answer in question.answers
+				.block.row
+					.col-md-1.i
+						.col-md-12
+							a(href='#')
+								img.arrow(src=''+root+'img/up.png')
+						.col-md-12
+							.vote
+								b= answer.votes
+						.col-md-12
+							a(href='')
+								img.arrow(src=''+root+'img/down.png')
+					.col-md-11.q
+						| #{answer.text}
+					span.date Answered: #{answer.createdAt.toUTCString()}
+			.block.row.answer-block
+				.form-group
+					h4 Your Answer
+					textarea#answer.form-control(rows='3', placeholder='Your Answer')
+					input.hidden(id='qID', value=''+question._id+'')
+				button#btn-sumbit.btn.btn-primary(type='submit') Submit
+	.col-md-3
+include incs/footer.pug

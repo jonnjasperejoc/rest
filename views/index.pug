@@ -1,0 +1,26 @@
+include incs/header.pug    
+#content.row
+	.col-md-3
+	.col-md-6
+		.row.qa-head.text-center
+			img#qa.img-center(src='img/Coding-Html-icon.png')
+		h3 Code Q&A
+		.row
+			.col-md-10
+				input.question.form-control.mr-sm-2(type='text', name="text" placeholder="What's your Question?")
+			.col-md-2
+				button#ask.ask.btn.btn-secondary.my-2.my-sm-0.btn-block(type='submit') Ask
+		.row.top-questions
+			.block
+				h5 Top Questions
+			each question in questions
+				- var date = new Date(question.createAt);
+				a.thread(href='questions/'+question._id)
+					.block.row
+						.col-md-1.i
+							img(src='img/person-icon.png')
+						.col-md-11.q
+							| #{question.text}
+						span.date #{question.createdAt.toUTCString()}
+	.col-md-3
+include incs/footer.pug  
